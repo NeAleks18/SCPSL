@@ -47,6 +47,7 @@
 	</ItemGroup>
 
   <ItemGroup>
+		<Reference Include="F:\SteamLibrary\steamapps\common\sbox\.source2\references\alex.iconify.34953.68444f2a6c9276cf.dll" />
 		<ProjectReference Include="F:\SteamLibrary\steamapps\common\sbox\addons\base\code\Base Library.csproj" />
 
   </ItemGroup>

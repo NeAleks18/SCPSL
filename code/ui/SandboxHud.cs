@@ -15,6 +15,7 @@ public partial class SandboxHud : HudEntity<RootPanel>
 		RootPanel.AddChild<VoiceSpeaker>();
 		RootPanel.AddChild<Scoreboard<ScoreboardEntry>>();
 		RootPanel.AddChild<Health>();
+		RootPanel.AddChild<AllIcons>();
 		RootPanel.AddChild<discordLink>();
 		RootPanel.AddChild<DevelopStatus>();
 		RootPanel.AddChild<InventoryBar>();
