@@ -1,0 +1,332 @@
+{
+  "Title": "SCP: Secret Laboratory",
+  "Type": "game",
+  "Org": "nealeks",
+  "Ident": "scpsl",
+  "Tags": "scp scpsl laborotory game wip",
+  "Schema": 1,
+  "HasAssets": true,
+  "AssetsPath": "",
+  "Resources": "*.vmdl_c.png\nentity/*.png\n*\n**",
+  "MenuResources": "/menu/*",
+  "HasCode": true,
+  "CodePath": "code",
+  "PackageReferences": [],
+  "EditorReferences": null,
+  "Metadata": {
+    "MapList": [
+      "facepunch.square"
+    ],
+    "PerMapRanking": false,
+    "LeaderboardType": "None",
+    "RankType": "None",
+    "MapSelect": "Unrestricted",
+    "GameNetworkType": "Multiplayer",
+    "MaxPlayers": 30,
+    "MinPlayers": 1,
+    "Collision": {
+      "Defaults": {
+        "solid": "Collide",
+        "trigger": "Trigger",
+        "ladder": "Ignore",
+        "water": "Trigger",
+        "debris": "Unset",
+        "player": "Unset",
+        "glass": "Unset",
+        "weapon": "Collide",
+        "nocollide": "Ignore"
+      },
+      "Pairs": [
+        {
+          "a": "solid",
+          "b": "solid",
+          "r": "Collide"
+        },
+        {
+          "a": "trigger",
+          "b": "playerclip",
+          "r": "Ignore"
+        },
+        {
+          "a": "solid",
+          "b": "trigger",
+          "r": "Trigger"
+        },
+        {
+          "a": "playerclip",
+          "b": "solid",
+          "r": "Collide"
+        },
+        {
+          "a": "debris",
+          "b": "debris"
+        },
+        {
+          "a": "debris",
+          "b": "player",
+          "r": "Ignore"
+        },
+        {
+          "a": "trigger",
+          "b": "player"
+        },
+        {
+          "a": "ladder",
+          "b": "player"
+        },
+        {
+          "a": "trigger",
+          "b": "debris"
+        },
+        {
+          "a": "ladder",
+          "b": "debris"
+        },
+        {
+          "a": "player",
+          "b": "player"
+        },
+        {
+          "a": "player",
+          "b": "glass",
+          "r": "Trigger"
+        },
+        {
+          "a": "trigger",
+          "b": "glass",
+          "r": "Ignore"
+        },
+        {
+          "a": "glass",
+          "b": "glass",
+          "r": "Ignore"
+        },
+        {
+          "a": "water",
+          "b": "glass"
+        },
+        {
+          "a": "player",
+          "b": "weapon",
+          "r": "Trigger"
+        },
+        {
+          "a": "solid",
+          "b": "nocollide",
+          "r": "Collide"
+        },
+        {
+          "a": "player",
+          "b": "nocollide",
+          "r": "Collide"
+        }
+      ]
+    },
+    "GameCategory": "None",
+    "Physics": {
+      "SubSteps": 4,
+      "TimeScale": 1,
+      "Gravity": "0,0,-800",
+      "AirDensity": 1.2,
+      "SleepingEnabled": true,
+      "SimulationMode": "Continuous",
+      "PositionIterations": 2,
+      "VelocityIterations": 8,
+      "SoftBodyIterations": 1,
+      "SoftBodySubsteps": 1
+    },
+    "DefaultLeaderboards": null,
+    "Summary": "Create and play in your own sandbox mode.",
+    "Description": "This game lets you spawn props and ragdolls and create entities to play with. It\u0027s like Garry\u0027s Mod.\r\n\r\nThis is a bit of a sandbox itself. This is not the final sandbox gamemode. All of this code will likely be thrown away and re-written when we come to do the sandbox gamemode proper.",
+    "Public": true,
+    "ReplaceTags": "sandbox game dynamic spawnmenu physgun",
+    "CsProjName": "",
+    "ControlModes": {},
+    "InputSettings": {
+      "Actions": [
+        {
+          "Name": "Forward",
+          "KeyboardCode": "W",
+          "GroupName": "Movement"
+        },
+        {
+          "Name": "Backward",
+          "KeyboardCode": "S",
+          "GroupName": "Movement"
+        },
+        {
+          "Name": "Left",
+          "KeyboardCode": "A",
+          "GroupName": "Movement"
+        },
+        {
+          "Name": "Right",
+          "KeyboardCode": "D",
+          "GroupName": "Movement"
+        },
+        {
+          "Name": "Jump",
+          "KeyboardCode": "space",
+          "GamepadCode": "A",
+          "GroupName": "Movement"
+        },
+        {
+          "Name": "Run",
+          "KeyboardCode": "shift",
+          "GamepadCode": "LeftJoystickButton",
+          "GroupName": "Movement"
+        },
+        {
+          "Name": "Walk",
+          "KeyboardCode": "alt",
+          "GroupName": "Movement"
+        },
+        {
+          "Name": "Duck",
+          "KeyboardCode": "ctrl",
+          "GamepadCode": "B",
+          "GroupName": "Movement"
+        },
+        {
+          "Name": "attack1",
+          "KeyboardCode": "mouse1",
+          "GamepadCode": "RightTrigger",
+          "GroupName": "Actions"
+        },
+        {
+          "Name": "attack2",
+          "KeyboardCode": "mouse2",
+          "GamepadCode": "LeftTrigger",
+          "GroupName": "Actions"
+        },
+        {
+          "Name": "reload",
+          "KeyboardCode": "r",
+          "GamepadCode": "X",
+          "GroupName": "Actions"
+        },
+        {
+          "Name": "use",
+          "KeyboardCode": "e",
+          "GamepadCode": "Y",
+          "GroupName": "Actions"
+        },
+        {
+          "Name": "Slot1",
+          "KeyboardCode": "1",
+          "GamepadCode": "DpadWest",
+          "GroupName": "Inventory"
+        },
+        {
+          "Name": "Slot2",
+          "KeyboardCode": "2",
+          "GamepadCode": "DpadEast",
+          "GroupName": "Inventory"
+        },
+        {
+          "Name": "Slot3",
+          "KeyboardCode": "3",
+          "GamepadCode": "DpadSouth",
+          "GroupName": "Inventory"
+        },
+        {
+          "Name": "Slot4",
+          "KeyboardCode": "4",
+          "GroupName": "Inventory"
+        },
+        {
+          "Name": "Slot5",
+          "KeyboardCode": "5",
+          "GroupName": "Inventory"
+        },
+        {
+          "Name": "Slot6",
+          "KeyboardCode": "6",
+          "GroupName": "Inventory"
+        },
+        {
+          "Name": "Slot7",
+          "KeyboardCode": "7",
+          "GroupName": "Inventory"
+        },
+        {
+          "Name": "Slot8",
+          "KeyboardCode": "8",
+          "GroupName": "Inventory"
+        },
+        {
+          "Name": "Slot9",
+          "KeyboardCode": "9",
+          "GroupName": "Inventory"
+        },
+        {
+          "Name": "SlotPrev",
+          "KeyboardCode": "mouse4",
+          "GamepadCode": "SwitchLeftBumper",
+          "GroupName": "Inventory"
+        },
+        {
+          "Name": "SlotNext",
+          "KeyboardCode": "mouse5",
+          "GamepadCode": "SwitchRightBumper",
+          "GroupName": "Inventory"
+        },
+        {
+          "Name": "View",
+          "KeyboardCode": "C",
+          "GamepadCode": "RightJoystickButton",
+          "GroupName": "Other"
+        },
+        {
+          "Name": "Voice",
+          "KeyboardCode": "v",
+          "GroupName": "Other"
+        },
+        {
+          "Name": "Drop",
+          "KeyboardCode": "g",
+          "GroupName": "Other"
+        },
+        {
+          "Name": "Flashlight",
+          "KeyboardCode": "f",
+          "GamepadCode": "DpadNorth",
+          "GroupName": "Other"
+        },
+        {
+          "Name": "Score",
+          "KeyboardCode": "tab",
+          "GamepadCode": "SwitchLeftMenu",
+          "GroupName": "Other"
+        },
+        {
+          "Name": "Chat",
+          "KeyboardCode": "enter",
+          "GroupName": "Other"
+        },
+        {
+          "Name": "Noclip",
+          "KeyboardCode": "N",
+          "GroupName": "Movement"
+        }
+      ]
+    },
+    "HttpAllowList": null,
+    "TickRate": 90,
+    "LaunchConfigs": [
+      {
+        "Name": "Test",
+        "GameIdent": "local.scpsl#local",
+        "MapName": "facepunch.construct23",
+        "MaxPlayers": 1,
+        "GameSettings": {},
+        "Addons": "",
+        "PreLaunchCommand": "",
+        "PostLaunchCommand": ""
+      }
+    ],
+    "SavedGames": false,
+    "MapDependentSaves": false,
+    "SaveFormatVersion": 1
+  }
+}
